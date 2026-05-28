@@ -17,7 +17,7 @@ pipeline {
         }
     }
 }
-        
+        /*
         stage('Minikube Load') {
     steps {
         dir('user-service') {
@@ -25,7 +25,8 @@ pipeline {
         }
     }
 }
-
+*/
+       /*
         stage('Kubernetes Deploy') {
     steps {
         dir('user-service/kubernetes') {
@@ -34,5 +35,6 @@ pipeline {
         }
     }
 }
+*/
     }
 }        
