@@ -27,6 +27,7 @@ pipeline {
 }
 */
        
+       /*
         stage('Kubernetes Deploy') {
     steps {
         dir('user-service/kubernetes') {
@@ -35,6 +36,6 @@ pipeline {
         }
     }
 }
-
+*/
     }
 }        
