@@ -11,11 +11,13 @@ pipeline {
         }
 
         stage('Docker Build') {
-            steps {
-                sh 'docker build -t banking-user-service:v1 .'
-            }
+    steps {
+        dir('user-service') {
+            sh 'docker build -t banking-user-service:v1 .'
         }
-
+    }
+}
+        
         stage('Minikube Load') {
             steps {
                 sh 'minikube image load banking-user-service:v1'
