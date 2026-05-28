@@ -1,13 +1,23 @@
 terraform {
   required_providers {
+
     docker = {
       source  = "kreuzwerker/docker"
       version = "~> 3.0.2"
+    }
+
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.32.0"
     }
   }
 }
 
 provider "docker" {}
+
+provider "kubernetes" {
+  config_path = "C:/Users/acer/.kube/config"
+}
 
 resource "docker_image" "banking_user_image" {
   name = "banking-user-service:v1"
