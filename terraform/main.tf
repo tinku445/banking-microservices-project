@@ -16,7 +16,7 @@ terraform {
 provider "docker" {}
 
 provider "kubernetes" {
-  config_path = "C:/Users/acer/.kube/config"
+  config_path = "/var/jenkins_home/.kube/config"
 }
 
 resource "docker_image" "banking_user_image" {
